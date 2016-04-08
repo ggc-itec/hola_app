@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @game.title %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @game.link %>
+</p>
+
+<p>
+  <strong>Publisher:</strong>
+  <%= @game.publisher %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @game.year %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @game.genre %>
+</p>
+
+<p>
+  <strong>Players:</strong>
+  <%= @game.players %>
+</p>
+
+<h1>Comments on this Game:</h1>
+
+<% @game.comments.each do |comment| %>
+
+<p><%= comment.name %></p>
+<p><%= comment.body %></p>
+<% end %>
+
+
+<%# = link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>
