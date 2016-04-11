@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'static_pages/about'
+
+  get 'static_pages/hits'
+
   resources :comments
   resources :games, only: [ :index, :show] 
   # The priority is based upon order of creation: first created -> highest priority.

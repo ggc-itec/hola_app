@@ -1,0 +1,11 @@
+<h1>Trending Games</h1>
+<p>Here are the most commented games:</p>
+<ol>
+<% @hits.each do |hit| %>
+<li> <%= Game.find(hit[0]).title %>
+<%= link_to 'Details', game_path(hit[0]) %>
+</li>
+<% end %>
+</ol>
+<br/>
+<%= link_to 'Home', root_path %>
