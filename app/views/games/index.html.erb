@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= render 'nav' %>
+
 <h1>Listing Games</h1>
 
 <table>
@@ -19,7 +21,7 @@
     <% @games.each do |game| %>
       <tr>
         <td><%= game.title %></td>
-        <td><%= game.link %></td>
+        <td><a href="<%= game.link %>" target="_blank">Link</a></td>
         <td><%= game.publisher %></td>
         <td><%= game.year %></td>
         <td><%= game.genre %></td>
